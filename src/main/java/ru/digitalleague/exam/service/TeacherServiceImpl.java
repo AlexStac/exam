@@ -34,7 +34,7 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public void editTeacher(Long id, TeacherEntity teacherEntity) {
         if (!teacherRepository.existsById(id)) {
-            log.info("Student with id " + id + " not found");
+            log.info("Teacher with id " + id + " not found");
         } else {
             TeacherEntity teacherById = teacherRepository.findById(id).get();
             teacherById.setFioTeacher(teacherEntity.getFioTeacher());
